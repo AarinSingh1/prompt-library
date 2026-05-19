@@ -20,7 +20,9 @@
       "Bash(git checkout *)",
       "Bash(git pull *)",
       "Bash(openssl rand *)",
-      "Bash(mkdir -p /Applications/promptlibraryfolder/src/app/api/auth/\\\\[...nextauth\\\\])"
+      "Bash(mkdir -p /Applications/promptlibraryfolder/src/app/api/auth/\\\\[...nextauth\\\\])",
+      "Bash(mkdir -p /Applications/promptlibraryfolder/src/app/api/prompts/\\\\[id\\\\])",
+      "Bash(mkdir -p /Applications/promptlibraryfolder/src/app/\\\\\\(app\\\\\\)/prompts/\\\\[id\\\\]/edit)"
     ]
   }
 }
