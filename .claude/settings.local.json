@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__87221f6e-936b-4067-a24c-bd2cdc72c366__list_projects",
+      "mcp__87221f6e-936b-4067-a24c-bd2cdc72c366__list_teams",
+      "mcp__87221f6e-936b-4067-a24c-bd2cdc72c366__list_issues",
+      "mcp__87221f6e-936b-4067-a24c-bd2cdc72c366__save_project",
+      "mcp__87221f6e-936b-4067-a24c-bd2cdc72c366__save_issue",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git)"
+    ]
+  }
+}
