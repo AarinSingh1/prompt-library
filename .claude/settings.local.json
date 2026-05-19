@@ -22,7 +22,9 @@
       "Bash(openssl rand *)",
       "Bash(mkdir -p /Applications/promptlibraryfolder/src/app/api/auth/\\\\[...nextauth\\\\])",
       "Bash(mkdir -p /Applications/promptlibraryfolder/src/app/api/prompts/\\\\[id\\\\])",
-      "Bash(mkdir -p /Applications/promptlibraryfolder/src/app/\\\\\\(app\\\\\\)/prompts/\\\\[id\\\\]/edit)"
+      "Bash(mkdir -p /Applications/promptlibraryfolder/src/app/\\\\\\(app\\\\\\)/prompts/\\\\[id\\\\]/edit)",
+      "Bash(mkdir -p /Applications/promptlibraryfolder/src/app/api/folders/\\\\[id\\\\])",
+      "Bash(mkdir -p /Applications/promptlibraryfolder/src/app/api/tags/\\\\[id\\\\])"
     ]
   }
 }

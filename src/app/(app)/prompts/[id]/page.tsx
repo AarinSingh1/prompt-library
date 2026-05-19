@@ -7,6 +7,7 @@ import { buttonVariants } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { DeletePromptButton } from '@/components/delete-prompt-button'
 import { CopyButton } from '@/components/copy-button'
+import { PromptOptimizer } from '@/components/prompt-optimizer'
 import { cn } from '@/lib/utils'
 import { FolderOpen, Pencil, Clock } from 'lucide-react'
 
@@ -77,6 +78,10 @@ export default async function PromptDetailPage({ params }: PageProps) {
         </span>
       </div>
 
+      {/* AI Optimizer */}
+      <PromptOptimizer promptId={prompt.id} originalContent={prompt.content} />
+
+      {/* Version History */}
       {prompt.versions.length > 1 && (
         <>
           <Separator className="my-6" />
@@ -86,7 +91,9 @@ export default async function PromptDetailPage({ params }: PageProps) {
               {prompt.versions.map((v, i) => (
                 <div key={v.id} className="flex items-center gap-3 text-xs text-muted-foreground">
                   <span className="w-4 text-right text-foreground font-medium">{prompt.versions.length - i}</span>
-                  <span className="capitalize text-foreground">{v.source}</span>
+                  <span className={cn('capitalize font-medium', v.source === 'optimization' ? 'text-violet-500' : 'text-foreground')}>
+                    {v.source === 'optimization' ? '✨ AI' : 'Manual'}
+                  </span>
                   <span>{new Date(v.createdAt).toLocaleString()}</span>
                 </div>
               ))}
