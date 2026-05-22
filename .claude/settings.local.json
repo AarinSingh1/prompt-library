@@ -6,7 +6,25 @@
       "mcp__87221f6e-936b-4067-a24c-bd2cdc72c366__list_issues",
       "mcp__87221f6e-936b-4067-a24c-bd2cdc72c366__save_project",
       "mcp__87221f6e-936b-4067-a24c-bd2cdc72c366__save_issue",
-      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git)"
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git)",
+      "Bash(npm install *)",
+      "Bash(brew list *)",
+      "Read(//usr/local/bin/**)",
+      "Bash(export PATH=\"/opt/homebrew/bin:$PATH\")",
+      "Bash(gh auth *)",
+      "Bash(find /usr /opt /home ~/Applications -name \"gh\" -type f 2>/dev/null | head -5)",
+      "Bash(export PATH=\"$PATH:/usr/local/bin:/opt/homebrew/bin:/usr/bin\")",
+      "Bash(export PATH=\"$PATH:/usr/local/bin:/opt/homebrew/bin\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git checkout *)",
+      "Bash(git pull *)",
+      "Bash(openssl rand *)",
+      "Bash(mkdir -p /Applications/promptlibraryfolder/src/app/api/auth/\\\\[...nextauth\\\\])",
+      "Bash(mkdir -p /Applications/promptlibraryfolder/src/app/api/prompts/\\\\[id\\\\])",
+      "Bash(mkdir -p /Applications/promptlibraryfolder/src/app/\\\\\\(app\\\\\\)/prompts/\\\\[id\\\\]/edit)",
+      "Bash(mkdir -p /Applications/promptlibraryfolder/src/app/api/folders/\\\\[id\\\\])",
+      "Bash(mkdir -p /Applications/promptlibraryfolder/src/app/api/tags/\\\\[id\\\\])"
     ]
   }
 }
