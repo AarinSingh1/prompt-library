@@ -9,15 +9,34 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter: PrismaAdapter(db),
   providers: [
     Google({
-      clientId: process.env.GOOGLE_CLIENT_ID!,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      allowDangerousEmailAccountLinking: true,
     }),
   ],
-  callbacks: {
-    ...authConfig.callbacks,
-    session({ session, user }) {
-      session.user.id = user.id
-      return session
+  secret: process.env.NEXTAUTH_SECRET || process.env.AUTH_SECRET,
+  trustHost: true,
+  debug: true,
+  logger: {
+    error(error) {
+      // eslint-disable-next-line no-console
+      console.error(
+        '[auth][full-error]',
+        error?.name,
+        error?.message,
+        '\nstack:',
+        error?.stack,
+        '\ncause:',
+        (error as { cause?: unknown })?.cause,
+      )
+    },
+    warn(code) {
+      // eslint-disable-next-line no-console
+      console.warn('[auth][warn]', code)
+    },
+    debug(code, metadata) {
+      // eslint-disable-next-line no-console
+      console.log('[auth][debug]', code, metadata)
     },
   },
 })
