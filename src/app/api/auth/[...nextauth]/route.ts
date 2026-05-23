@@ -1,10 +1,10 @@
 import { handlers } from '@/auth'
 import { NextRequest } from 'next/server'
 
-export async function GET(req: NextRequest, ctx: { params: Promise<{ nextauth: string[] }> }) {
+export async function GET(req: NextRequest) {
   console.log('[route][GET] url:', req.url)
   try {
-    return await handlers.GET(req, ctx)
+    return await handlers.GET(req)
   } catch (e: unknown) {
     const err = e as Error
     console.error('[route][GET][unhandled]', err?.name, err?.message, '\nstack:', err?.stack, '\ncause:', (err as { cause?: unknown })?.cause)
@@ -12,10 +12,10 @@ export async function GET(req: NextRequest, ctx: { params: Promise<{ nextauth: s
   }
 }
 
-export async function POST(req: NextRequest, ctx: { params: Promise<{ nextauth: string[] }> }) {
+export async function POST(req: NextRequest) {
   console.log('[route][POST] url:', req.url)
   try {
-    return await handlers.POST(req, ctx)
+    return await handlers.POST(req)
   } catch (e: unknown) {
     const err = e as Error
     console.error('[route][POST][unhandled]', err?.name, err?.message, '\nstack:', err?.stack, '\ncause:', (err as { cause?: unknown })?.cause)
